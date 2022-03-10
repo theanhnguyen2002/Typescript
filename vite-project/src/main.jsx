@@ -33,5 +33,6 @@ ReactDOM.render(
   <div>
     <h3> {myArr.map((item, index) => <h3>{item.name}</h3> )} </h3>
     <ShowInfo name="Thế Anh"/>
+    <App/>
   </div>
-, root);
+, document.getElementById( 'root' ));
