@@ -16,14 +16,14 @@ function App() {
     <div>
       Count: {count} <button onClick={() => setCout(count + 1)}>Click</button>
       <hr/>
-      {myName} <button onClick={() => setCout("NTA")}>Change Name</button>
+      {myName} <button onClick={() => setMyName("NTA")}>Change Name</button>
       <hr />
       <button onClick={() => setStatus(!status)}>Toggled</button>
       <hr />
       {status ? products.map((item, index) => <div key={index}>{item.name}</div>) : ""}
-      <ShowInfo name="Thế Anh"/>
-      <ShowInfo name="Thế Anh" />
-      <ShowInfo name="Thế Anh" />
+      <ShowInfo name="Thế Anh 1"/>
+      <ShowInfo name="Thế Anh 2" />
+      <ShowInfo name="Thế Anh 3" />
     </div>
   )
 }
