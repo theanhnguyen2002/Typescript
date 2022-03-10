@@ -12,6 +12,7 @@ function App() {
     {id: 3, name: "Product C" },
   ]);
 
+  
   return (
     <div>
       Count: {count} <button onClick={() => setCout(count + 1)}>Click</button>
