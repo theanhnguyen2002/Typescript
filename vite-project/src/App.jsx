@@ -11,7 +11,6 @@ function App() {
     {id: 2, name: "Product B" },
     {id: 3, name: "Product C" },
   ]);
-
   
   return (
     <div>
