@@ -14,7 +14,8 @@ import Home from './pages/Home';
 import AdminLayout from './pages/layouts/AdminLayout';
 import { Navigate } from 'react-router-dom';
 import Dashboard from './pages/Dashboard';
-import ProductManager from './pages/layouts/ProductManager';
+import ProductManager from './pages/ProductManager';
+import ProductDetail from './pages/ProductDetail';
 
 function App() {
   const [count, setCount] = useState(0)
