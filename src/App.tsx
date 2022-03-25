@@ -1,26 +1,25 @@
 import { useEffect, useState } from 'react'
-import { Routes, Route, NavLink } from 'react-router-dom';
-import logo from './logo.svg'
+import { Routes, Route, NavLink, Navigate } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
-// import "./dashboard.css";
+import "./dashboard.css";
 
 import ShowInfo from './components/ShowInfo'
 import Product from './components/Product'
-import { add, list, remove } from './api/product';
+import { add, list, remove, update } from './api/product';
 import axios from 'axios';
-import type { IProduct } from './types/product';
+import type { ProductTye } from './types/product';
 import WebsiteLayout from './pages/layouts/WebsiteLayout';
 import Home from './pages/Home';
 import AdminLayout from './pages/layouts/AdminLayout';
-import { Navigate } from 'react-router-dom';
 import Dashboard from './pages/Dashboard';
 import ProductManager from './pages/ProductManager';
 import ProductDetail from './pages/ProductDetail';
 import ProductAdd from './pages/ProductAdd';
+import ProductEdit from './pages/ProductEdit';
+import PrivateRouter from './components/PrivateRouter';
 
 function App() {
-  const [count, setCount] = useState(0)
-  const [products, setProducts] = useState<IProduct[]>([]);
+  const [products, setProducts] = useState<ProductTye[]>([]);
 
   useEffect(() => {
     const getProducts = async () => {
@@ -36,9 +35,14 @@ function App() {
     // reRender
     setProducts(products.filter(item => item.id !== id));
   }
-  const onHandleAdd = async (product: IProduct) => {
+  const onHandleAdd = async (product: ProductTye) => {
     const { data } = await add(product);
     setProducts([...products, data]);
+  }
+
+  const onHandleUpdate = async (product: ProductTye) => {
+    const { data } = await update(product);
+    setProducts(products.map(item => item.id == data.id ? data: item));
   }
 
   return (
@@ -59,6 +63,7 @@ function App() {
       </header>
       <main>
         <Routes>
+
           <Route path="/" element={<WebsiteLayout />}>
             <Route index element={<Home />} />
             <Route path="product">
@@ -66,17 +71,20 @@ function App() {
               <Route path=":id" element={<ProductDetail />} />
             </Route>
             <Route path="about" element={<h1>About page</h1>} />
-
           </Route>
 
-          <Route path="admin" element={<AdminLayout />}>
+          <Route path="admin" element={<PrivateRouter><AdminLayout /></PrivateRouter>}>
             <Route index element={<Navigate to="dashboard" />} />
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="products" >
-              <Route index element={<ProductManager products={products} onRemove={removeItem} />} />
-              <Route path="add" element={< ProductAdd name="Theanh" onAdd={onHandleAdd} />} />
+              <Route index element={<PrivateRouter><ProductManager products={products} onRemove={removeItem}/></PrivateRouter>} />
+              <Route path=":id/edit" element={<ProductEdit onUpdate={onHandleUpdate}/>} />
+              <Route path="add" element={<ProductAdd name="TheAnh" onAdd={onHandleAdd} />} />
             </Route>
           </Route>
+
+          <Route path="/login" element={<h1>Login page</h1>} />
+          
         </Routes>
       </main>
     </div>

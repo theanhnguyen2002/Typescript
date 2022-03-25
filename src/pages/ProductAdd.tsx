@@ -11,7 +11,7 @@ type TypeInputs = {
 }
 
 const ProductAdd = (props: ProductAddProps) => {
-    const { register, handleSubmit, formState: { errors } } = useForm<TypeInputs>();
+    const { register, handleSubmit, formState: { errors }} = useForm<TypeInputs>();
     const navigate = useNavigate();
 
     const onSubmit: SubmitHandler<TypeInputs> = data => {

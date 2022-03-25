@@ -1,8 +1,8 @@
 {
     "products": [
         {
-            "name": "San pham B",
-            "price": "5000",
+            "name": "Sản phẩm",
+            "price": "500",
             "id": 1
         }
     ]
