@@ -1,0 +1,14 @@
+{
+  "products": [
+    {
+      "name": "Sản phẩm",
+      "price": "500",
+      "id": 1
+    },
+    {
+      "name": "Nguyễn Thế Anh",
+      "price": "500",
+      "id": 2
+    }
+  ]
+}

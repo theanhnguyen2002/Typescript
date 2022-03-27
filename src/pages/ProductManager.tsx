@@ -29,7 +29,11 @@ const ProductManager = (props: ProductManagerProps) => {
         }
     })
     return (
+
+        // <NavLink to="/admin">Admin</NavLink>
+
         <Table columns={columns} dataSource={dataSource} />
+        
     )
 }
 

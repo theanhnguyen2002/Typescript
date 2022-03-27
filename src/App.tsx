@@ -59,6 +59,9 @@ function App() {
           <li>
             <NavLink to="/about">About</NavLink>
           </li>
+          <li>
+            <NavLink to="/admin">Admin</NavLink>
+          </li>
         </ul>
       </header>
       <main>
@@ -79,7 +82,7 @@ function App() {
             <Route path="products" >
               <Route index element={<PrivateRouter><ProductManager products={products} onRemove={removeItem}/></PrivateRouter>} />
               <Route path=":id/edit" element={<ProductEdit onUpdate={onHandleUpdate}/>} />
-              <Route path="add" element={<ProductAdd name="TheAnh" onAdd={onHandleAdd} />} />
+              <Route path="add" element={<ProductAdd name="" onAdd={onHandleAdd} />} />
             </Route>
           </Route>
 
