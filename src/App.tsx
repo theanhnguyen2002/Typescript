@@ -73,7 +73,8 @@ function App() {
               <Route path=":id/edit" element={<ProductEdit onUpdate={onHandleUpdate}/>} />
               <Route path="add" element={<ProductAdd name="" onAdd={onHandleAdd} />} />
             </Route>
-            {/* <Route path="/" element={<Home />} /> */}
+            {/* <Route path="/" element={<WebsiteLayout />}/> */}
+
 
           </Route>
 
