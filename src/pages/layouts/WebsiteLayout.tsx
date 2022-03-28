@@ -6,7 +6,11 @@ type Props = {}
 const WebsiteLayout = (props: Props) => {
     return (
         <div>
-            <header>Header website</header>
+            <header>
+                
+
+
+            </header>
             <main>
                 <Outlet />
             </main>
