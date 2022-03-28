@@ -1,0 +1,124 @@
+
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: hsl(43, 23%, 75%);
+  background-image: url("img_tree.gif");
+
+
+}
+
+header{
+  width: 1090px;
+  margin: 0 auto;
+
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: 180px 550px 400px ;
+  /* float: left; */
+  
+}
+.navMenu{
+  padding: 10px;
+}
+.navMenu a {
+  color: #1d1d1d;
+  text-decoration: none;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: inline-block;
+  /* width: 100px; */
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+
+  margin-left: 1.5rem
+}
+
+.navMenu a:hover {
+  color: #3b8e42;
+}
+
+.navMenu .dot {
+  width: 6px;
+  height: 6px;
+  background: #3b8e42;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transform: translateX(30px);
+  transform: translateX(30px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.navMenu a:nth-child(1):hover ~ .dot {
+  -webkit-transform: translateX(71px);
+  transform: translateX(71px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(2):hover ~ .dot {
+  -webkit-transform: translateX(190px);
+  transform: translateX(190px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(3):hover ~ .dot {
+  -webkit-transform: translateX(314px);
+  transform: translateX(314px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(4):hover ~ .dot {
+  -webkit-transform: translateX(425px);
+  transform: translateX(425px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+
+/* search + cart */
+
+.search_cart{
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 330px 1fr;
+}
+
+.search-box{
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+}
+.input-search{
+  height: 35px;
+  width: 300px;
+  border: 1px solid rgb(0, 0, 0);
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 25px;
+  background-color: #ffffff;
+}
+.cart{
+  padding-top: 3px;
+  
+}
+
+
+
+

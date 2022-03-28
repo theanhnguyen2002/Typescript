@@ -10,6 +10,9 @@ import axios from 'axios';
 import type { ProductTye } from './types/product';
 import WebsiteLayout from './pages/layouts/WebsiteLayout';
 import Home from './pages/Home';
+import ProductPage from './pages/ProductPage';
+import AboutPage from './pages/AboutPage';
+
 import AdminLayout from './pages/layouts/AdminLayout';
 import Dashboard from './pages/Dashboard';
 import ProductManager from './pages/ProductManager';
@@ -17,6 +20,8 @@ import ProductDetail from './pages/ProductDetail';
 import ProductAdd from './pages/ProductAdd';
 import ProductEdit from './pages/ProductEdit';
 import PrivateRouter from './components/PrivateRouter';
+
+
 
 function App() {
   const [products, setProducts] = useState<ProductTye[]>([]);
@@ -47,59 +52,17 @@ function App() {
 
   return (
     <div className="App">
-
-      <header>
-        {/* <ul>
-          <li>
-            <NavLink to="/">Home Page</NavLink>
-          </li>
-          <li>
-            <NavLink to="/product">Product Page</NavLink>
-          </li>
-          <li>
-            <NavLink to="/about">About</NavLink>
-          </li>
-          <li>
-            <NavLink to="/admin">Admin</NavLink>
-          </li>
-        </ul> */}
-
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <a>LOGO</a>
-          
-          <div className="collapse navbar-collapse " id="navbarSupportedContent">
-            <ul className="navbar-nav mr-auto">
-              <li className="nav-item">
-                <a><NavLink to="/">Home Page</NavLink></a>
-              </li>
-              <li className="nav-item">
-                <a><NavLink to="/product">Product Page</NavLink></a>
-              </li>
-              <li className="nav-item">
-                <a><NavLink to="/about">About</NavLink></a>
-              </li>
-              <li className="nav-item">
-                <a><NavLink to="/admin">Admin</NavLink></a>
-              </li>
-            </ul>
-            <form className="form-inline my-2 my-lg-0">
-              <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-              <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-          </div>
-        </nav>
-
-      </header>
+      
       <main>
         <Routes>
 
           <Route path="/" element={<WebsiteLayout />}>
-            <Route index element={<Home />} />
+            <Route index element={<Home />}  />
             <Route path="product">
-              <Route index element={<h1>Hien thi san pham</h1>} />
+              <Route index element={<ProductPage /> } />
               <Route path=":id" element={<ProductDetail />} />
             </Route>
-            <Route path="about" element={<h1>About page</h1>} />
+            <Route path="about" element={<AboutPage />} />
           </Route>
 
           <Route path="admin" element={<PrivateRouter><AdminLayout /></PrivateRouter>}>
@@ -110,6 +73,8 @@ function App() {
               <Route path=":id/edit" element={<ProductEdit onUpdate={onHandleUpdate}/>} />
               <Route path="add" element={<ProductAdd name="" onAdd={onHandleAdd} />} />
             </Route>
+            {/* <Route path="/" element={<Home />} /> */}
+
           </Route>
 
           <Route path="/login" element={<h1>Login page</h1>} />
