@@ -6,7 +6,6 @@ import './js/sb-admin-2.min.js';
 import './vendor/chart.js/Chart.min.js';
 // import './js/demo/chart-area-demo.js';
 // import './js/demo/chart-pie-demo.js';
-
 import './css/sb-admin-2.min.css';
 import './vendor/fontawesome-free/css/all.min.css'
 

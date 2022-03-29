@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Assistant');
+
+body {
+    /* background: #eee; */
+    font-family: Assistant, sans-serif
+}
+
+.cell-1 {
+    border-collapse: separate;
+    border-spacing: 0 4em;
+    background: #fff;
+    border-bottom: 5px solid transparent;
+    background-clip: padding-box
+}
+
+thead {
+    background: #dddcdc
+}
+
+    
+
+#button_remove{
+    width: 80px;
+    height: 30px;
+    background: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 1px solid rgb(255, 0, 0);
+    
+}

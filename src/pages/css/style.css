@@ -7901,6 +7901,12 @@ button.bg-dark:focus {
   .mx-xl-auto {
     margin-left: auto !important; } }
 
+.text-news{
+  width: 280px;
+  height: 30px;
+}
+
+
 .text-monospace {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important; }
 
@@ -8051,7 +8057,7 @@ a.text-dark:hover, a.text-dark:focus {
   color: rgba(255, 255, 255, 0.5) !important; }
 
 .text-hide {
-  font: 0/0 a;
+  font: 0/0 ;
   color: transparent;
   text-shadow: none;
   background-color: transparent;
@@ -8260,8 +8266,9 @@ footer {
     background-size: cover;
     z-index: -1;
     opacity: .05; }
-  .footer-01 a {
-    color: #7f72e4; }
+  /* .footer-01 a {
+    
+     } */
   .footer-01 p {
     color: rgba(255, 255, 255, 0.6); }
   .footer-01 .copyright {

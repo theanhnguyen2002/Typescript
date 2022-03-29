@@ -10,13 +10,13 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  background: hsl(43, 23%, 75%);
-  background-image: url("img_tree.gif");
+  background: hsl(43, 62%, 49%);
+  /* background-image: url("img_tree.gif"); */
 
 
 }
 
-header{
+#header{
   width: 1090px;
   margin: 0 auto;
 
@@ -60,32 +60,32 @@ header{
 }
 
 .navMenu a:nth-child(1):hover ~ .dot {
-  -webkit-transform: translateX(71px);
-  transform: translateX(71px);
+  -webkit-transform: translateX(70px);
+  transform: translateX(70px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 1;
 }
 
 .navMenu a:nth-child(2):hover ~ .dot {
-  -webkit-transform: translateX(190px);
-  transform: translateX(190px);
+  -webkit-transform: translateX(177px);
+  transform: translateX(177px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 1;
 }
 
 .navMenu a:nth-child(3):hover ~ .dot {
-  -webkit-transform: translateX(314px);
-  transform: translateX(314px);
+  -webkit-transform: translateX(288px);
+  transform: translateX(288px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 1;
 }
 
 .navMenu a:nth-child(4):hover ~ .dot {
-  -webkit-transform: translateX(425px);
-  transform: translateX(425px);
+  -webkit-transform: translateX(390px);
+  transform: translateX(390px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 1;

@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import { ProductTye } from '../types/product'
 import { Table, Tag, Space } from 'antd';
+import './css/ProductManager.css'
 
 type ProductManagerProps = {
     products: ProductTye[];
@@ -34,29 +35,45 @@ const ProductManager = (props: ProductManagerProps) => {
         // <Table columns={columns} dataSource={dataSource} />
         <div>
             <div>ProductList</div>
-
-            <table>
-                <thead>
-                    <th>#</th>
-                    <th>Name</th>
-                    <th>Price</th>
-                    <th> <Link to="add">Add</Link></th>
-                </thead>
-                <tbody>
-                    {props.products.map((item, index) => {
-                        return <tr key={index}>
-                            <td>{index + 1}</td>
-                            <td>{item.name}</td>
-                            <td>{item.price}</td>
-                            <td>
-                                <Link to={`/admin/products/${item.id}/edit`}>Edit</Link>
-                                <button>Remove</button>
-                            </td>
-                        </tr>
-                    })}
-                </tbody>
-            </table>
+            <div className="container mt-5">
+                <div className="d-flex justify-content-center row">
+                    <div className="col-md-10">
+                    <div className="rounded">
+                        <div className="table-responsive table-borderless">
+                        <table className="table">
+                            <thead>
+                            <tr>
+                                <th className="text-center">#</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th />
+                            </tr>
+                            </thead>
+                            <tbody className="table-body">
+                                {props.products.map((item, index) => {
+                                    return <tr className="cell-1" key={index}>
+                                        <td className="text-center">{index + 1}</td>
+                                        <td>{item.name}</td>
+                                        <td>{item.price}</td>
+                                        <td>
+                                            {/* <span className="badge badge-success">Fullfilled</span> */}
+                                            <a id="edit" href=""><Link to={`/admin/products/${item.id}/edit`}>Edit</Link></a>
+                                            <button id="button_remove">Remove</button>
+                                        </td>                                    
+                                    </tr>
+                                })}
+                            </tbody>
+                        </table>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
+
+
+        
         
     )
 }

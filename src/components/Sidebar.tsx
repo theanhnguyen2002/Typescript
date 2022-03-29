@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import './css.css'
+import './Sidebar.css'
 
 type Props = {}
 
@@ -33,12 +33,19 @@ const Sidebar = (props: Props) => {
                     <div className="abilan">
                         <img src="https://res.cloudinary.com/dsirnbuyv/image/upload/v1648496099/1024px-Starbucks_Corporation_Logo_2011.svg_lkbznl.png" />
                     </div>
-                    <button className="compose">Compose Mail
-                    <span className="plus">
-                        <img src="https://i.ibb.co/v1HxGWj/add-1.png" /></span></button>
+
+
+                    <a><NavLink className="text-slate-600" to="/">
+                        <button className="compose">
+                            HOME
+                            <span className="plus">
+                                <img src="https://i.ibb.co/v1HxGWj/add-1.png" />
+                            </span>
+                        </button>
+                    </NavLink></a>
+                    
+
                     <div className="folders">Folders</div>
-                    
-                    
                     
                     <div className="folder-icons">
                         <div className="icon1">
@@ -60,16 +67,7 @@ const Sidebar = (props: Props) => {
                             </NavLink></a>
                         </div>
                     </div>
-                    <div className="folder-icons">
-                        <div className="icon1">
-                            <img src="https://i.ibb.co/2yLfX9W/sent-mail.png" />
-                        </div>
-                        <div className="icon-name">
-                            <a><NavLink className="text-slate-600" to="/">
-                                Home
-                            </NavLink></a>
-                        </div>
-                    </div>
+                    
                     
                     <div className="folders">
                     Online Friends
