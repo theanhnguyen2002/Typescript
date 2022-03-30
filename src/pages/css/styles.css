@@ -503,7 +503,9 @@ progress {
     font-size: 5rem;
   }
 }
-
+#btn-banner{
+  
+}
 .display-2 {
   font-size: calc(1.575rem + 3.9vw);
   font-weight: 300;
@@ -11410,7 +11412,7 @@ header.masthead {
   padding-bottom: 6rem;
   text-align: center;
   color: #fff;
-  background-image: url("../assets/img/header-bg.jpg");
+  background-image: url("https://res.cloudinary.com/dsirnbuyv/image/upload/v1648666068/pngtree-texture-background-coffee-beans-drink-banner-poster-image_189534_in99vu.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
