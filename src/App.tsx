@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Routes, Route, NavLink, Navigate } from 'react-router-dom';
 // import "bootstrap/dist/css/bootstrap.min.css";
-import "./dashboard.css";
 
 import ShowInfo from './components/ShowInfo'
 import Product from './components/Product'

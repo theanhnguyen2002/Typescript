@@ -6,27 +6,7 @@ type Props = {}
 
 const Sidebar = (props: Props) => {
     return (
-        // <nav id="sidebarMenu" className="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-        //     <div className="position-sticky pt-3">
-        //         <ul className="nav flex-column">
-        //             <li className="nav-item">
-        //                 <NavLink className="nav-link active" aria-current="page" to="/admin/dashboard">
-        //                     Dashboard
-        //                 </NavLink>
-        //             </li>
-        //             <li className="nav-item">
-        //                 <NavLink className="nav-link active" aria-current="page" to="/admin/products">
-        //                     Product
-        //                 </NavLink>
-        //             </li>
-        //             <li className="nav-item">
-        //                 <NavLink className="nav-link active" aria-current="page" to="/">
-        //                     Home
-        //                 </NavLink>
-        //             </li>
-        //         </ul>
-        //     </div>
-        // </nav>
+        
         
             <div className="navigation">
                 <div className="wrapper2 position-sticky pt-3">
@@ -35,15 +15,6 @@ const Sidebar = (props: Props) => {
                     </div>
 
 
-                    <a><NavLink className="text-slate-600" to="/">
-                        <button className="compose">
-                            HOME
-                            <span className="plus">
-                                <img src="https://i.ibb.co/v1HxGWj/add-1.png" />
-                            </span>
-                        </button>
-                    </NavLink></a>
-                    
 
                     <div className="folders">Folders</div>
                     
@@ -81,6 +52,19 @@ const Sidebar = (props: Props) => {
                     <div className="names">Don Allen
                     </div>
                     </div>
+
+
+
+
+                    <a id="back-home"><NavLink className="text-slate-600" to="/">
+                        <button className="compose">
+                            
+                            <img src="https://happyparty.vn/wp-content/uploads/2019/05/home-icon-png-white-4.png" />
+                            
+                        </button>
+                    </NavLink></a>
+
+
                 </div>
             </div>
         

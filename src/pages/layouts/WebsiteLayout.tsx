@@ -16,7 +16,7 @@ type Props = {}
 const WebsiteLayout = (props: Props) => {
     return (
         <div>
-            <header id="header">
+            <header className="fixed-top" id="header">
                 <div className="logo">
                     <img src="https://res.cloudinary.com/dsirnbuyv/image/upload/v1648496099/1024px-Starbucks_Corporation_Logo_2011.svg_lkbznl.png" alt="" width="160px" height="50px" />
                 </div>

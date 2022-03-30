@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { ProductTye } from '../types/product'
-import { Table, Tag, Space } from 'antd';
+import { Table, Tag, Space, Button } from 'antd';
 import './css/ProductManager.css'
 
 type ProductManagerProps = {
@@ -33,6 +33,7 @@ const ProductManager = (props: ProductManagerProps) => {
 
 
         // <Table columns={columns} dataSource={dataSource} />
+        
         <div>
             <div>ProductList</div>
             <div className="container mt-5">
