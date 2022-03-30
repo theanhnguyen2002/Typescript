@@ -1,6 +1,7 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom'
-import Sidebar from '../../components/Sidebar'
+import { Outlet } from 'react-router-dom';
+import Sidebar from '../../components/Sidebar';
+import '.AdminLayout.css';
 
 type Props = {}
 
@@ -13,7 +14,7 @@ const AdminLayout = (props: Props) => {
                     <Sidebar />  
                 </div>
                 
-                <main className="col-md-9 ms-sm-auto  ">
+                <main className="ms-sm-auto" id="main-admin-outlet">
                     <Outlet />
                 </main>
                 
