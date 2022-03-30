@@ -4,7 +4,7 @@ import ProductPage from './../pages/ProductPage';
 // import 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js';
 import './js/scripts.js';
 // import 'https://cdn.startbootstrap.com/sb-forms-latest.js';
-import './assets/favicon.ico';
+// import './assets/favicon.ico';
 // import 'https://use.fontawesome.com/releases/v6.1.0/js/all.js';
 // import 'https://fonts.googleapis.com/css?family=Montserrat:400,700';
 // import 'https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700';

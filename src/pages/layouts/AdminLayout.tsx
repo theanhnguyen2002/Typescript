@@ -10,7 +10,7 @@ const AdminLayout = (props: Props) => {
         <div className="container-fluid">
             <div className="row">
                 <div className="fixed-top">
-                    <Sidebar />
+                    <Sidebar />  
                 </div>
                 
                 <main className="col-md-9 ms-sm-auto  ">

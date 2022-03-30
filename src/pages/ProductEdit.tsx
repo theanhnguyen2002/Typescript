@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import { useForm, SubmitHandler} from 'react-hook-form';
 import { useNavigate, useParams } from 'react-router-dom';
 import { read } from '../api/product';
-import {ProductTye} from '../types/product'
+import { ProductTye } from '../types/product'
 
 
 type ProductEditProps = {
