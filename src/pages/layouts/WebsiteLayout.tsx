@@ -18,7 +18,7 @@ const WebsiteLayout = (props: Props) => {
         <div>
             <header className="fixed-top" id="header">
                 <div className="logo">
-                    <img src="https://res.cloudinary.com/dsirnbuyv/image/upload/v1648496099/1024px-Starbucks_Corporation_Logo_2011.svg_lkbznl.png" alt="" width="160px" height="50px" />
+                    <img src="https://res.cloudinary.com/dsirnbuyv/image/upload/v1648705533/1024px-Starbucks_Corporation_Logo_2011.svg_yoawtg.png" alt="" width="160px" height="50px" />
                 </div>
                 <nav className="navMenu">
 
@@ -35,7 +35,7 @@ const WebsiteLayout = (props: Props) => {
                     </div>
                     <div className="cart">
                         <a href="#">
-                            <img src="https://res.cloudinary.com/dsirnbuyv/image/upload/v1648482875/cart_gafuul.png" alt="" width="25px" height="25px" />
+                            <img src="https://res.cloudinary.com/dsirnbuyv/image/upload/v1648705533/cart_v2r6xb.png" alt="" width="25px" height="25px" />
                         </a>
                     </div>
                 </div>

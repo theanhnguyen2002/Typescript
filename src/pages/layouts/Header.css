@@ -19,7 +19,7 @@ body {
 #header{
   width: 1090px;
   margin: 0 auto;
-
+  /* background: white; */
   padding-top: 20px;
   display: grid;
   grid-template-columns: 180px 550px 400px ;
@@ -30,7 +30,7 @@ body {
   padding: 10px;
 }
 .navMenu a {
-  color: #1d1d1d;
+  color: #ffffff;
   text-decoration: none;
   font-size: 18px;
   text-transform: uppercase;
