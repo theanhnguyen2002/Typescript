@@ -10,36 +10,110 @@ import "./../js/bootstrap.min.js";
 import "./../js/main.js";
 
 
+import './../../pages/assets/vendor/css/core.css';
+
+
 
 type Props = {}
 
 const WebsiteLayout = (props: Props) => {
     return (
         <div>
-            <header className="fixed-top" id="header">
-                <div className="logo">
-                    <img src="https://res.cloudinary.com/dsirnbuyv/image/upload/v1648705533/1024px-Starbucks_Corporation_Logo_2011.svg_yoawtg.png" alt="" width="160px" height="50px" />
-                </div>
-                <nav className="navMenu">
-
-                    <a><NavLink to="/">Home</NavLink></a>
-                    <a><NavLink to="/product">Product</NavLink></a>
-                    <a><NavLink to="/about">About</NavLink></a>
-                    <a><NavLink to="/admin">Admin</NavLink></a>
-
-                    <div className="dot" />
-                </nav>
-                <div className="search_cart">
-                    <div className="search-box">
-                        <input type="text" className="input-search" placeholder="Search..." />
+            <div className="fixed-top" id="bg-header">
+                <header className="fixed-top" id="header">
+                    <div className="logo">
+                        <img src="https://res.cloudinary.com/dsirnbuyv/image/upload/v1648705533/1024px-Starbucks_Corporation_Logo_2011.svg_yoawtg.png" alt="" width="160px" height="50px" />
                     </div>
-                    <div className="cart">
-                        <a href="#">
-                            <img src="https://res.cloudinary.com/dsirnbuyv/image/upload/v1648705533/cart_v2r6xb.png" alt="" width="25px" height="25px" />
-                        </a>
+                    <nav className="navMenu">
+
+                        <a><NavLink to="/">Home</NavLink></a>
+                        <a><NavLink to="/product">Product</NavLink></a>
+                        <a><NavLink to="/about">About</NavLink></a>
+                        {/* <a><NavLink to="/admin">Admin</NavLink></a> */}
+
+                        <div className="dot" />
+                    </nav>
+                    <div className="search_cart">
+                        <div className="search-box">
+                            <input type="text" className="input-search" placeholder="Search..." />
+                        </div>
+                        <div className="cart">
+                            <a href="#">
+                                <img src="https://res.cloudinary.com/dsirnbuyv/image/upload/v1648705533/cart_v2r6xb.png" alt="" width="25px" height="25px" />
+                            </a>
+                        </div>
                     </div>
-                </div>
-            </header>
+                    
+                    <div className="">
+                        <ul className="navbar-nav flex-row align-items-center ms-auto">
+
+                            {/* User */}
+                            <li className="nav-item navbar-dropdown dropdown-user dropdown">
+                                <a className="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+                                    <div className="avatar avatar-online">
+                                        <img src="https://res.cloudinary.com/dsirnbuyv/image/upload/v1648479418/1024px-Starbucks_Corporation_Logo_2011.svg_m6pub6.png" className="w-px-40 h-auto rounded-circle" />
+                                    </div>
+                                </a>
+                                <ul className="dropdown-menu dropdown-menu-end">
+                                    <li>
+                                        <a className="dropdown-item" href="#">
+                                            <div className="d-flex">
+                                                <div className="flex-shrink-0 me-3">
+                                                    <div className="avatar avatar-online">
+                                                        <img src="https://res.cloudinary.com/dsirnbuyv/image/upload/v1648479418/1024px-Starbucks_Corporation_Logo_2011.svg_m6pub6.png" className="w-px-40 h-auto rounded-circle" />
+                                                    </div>
+                                                </div>
+                                                <div className="flex-grow-1">
+                                                    <span className="fw-semibold d-block">Name</span>
+                                                    <small className="text-muted">Admin</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <div className="dropdown-divider" />
+                                    </li>
+                                    <NavLink to="/admin">
+                                    <li>
+                                        <a className="dropdown-item" href="#">
+                                            <i className="bx bx-user me-2" />
+                                            <span className="align-middle">Admin</span>
+                                        </a>
+                                    </li>
+                                    </NavLink>
+                                    <li>
+                                        <a className="dropdown-item" href="#">
+                                            <i className="bx bx-cog me-2" />
+                                            <span className="align-middle">Settings</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a className="dropdown-item" href="#">
+                                            <span className="d-flex align-items-center align-middle">
+                                                <i className="flex-shrink-0 bx bx-credit-card me-2" />
+                                                <span className="flex-grow-1 align-middle">Billing</span>
+                                                <span className="flex-shrink-0 badge badge-center rounded-pill bg-danger w-px-20 h-px-20">4</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <div className="dropdown-divider" />
+                                    </li>
+                                    <li>
+                                        <a className="dropdown-item" href="auth-login-basic.html">
+                                            <i className="bx bx-power-off me-2" />
+                                            <span className="align-middle">Log Out</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            {/*/ User */}
+                        </ul>
+                    </div>
+
+
+                </header>
+            </div>
             <main>
                 <Outlet />
             </main>

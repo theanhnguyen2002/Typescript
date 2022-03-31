@@ -15,14 +15,19 @@ body {
 
 
 }
-
+#bg-header{
+  width: 1590px;
+  height: 90px;
+  background: #0c1824e3;
+}
 #header{
-  width: 1090px;
+  width: 1200px;
+  height: 90px;
   margin: 0 auto;
-  /* background: white; */
+  /* background: #0c1824b4; */
   padding-top: 20px;
   display: grid;
-  grid-template-columns: 180px 550px 400px ;
+  grid-template-columns: 180px 550px 400px 100px;
   /* float: left; */
   
 }
@@ -44,13 +49,13 @@ body {
 }
 
 .navMenu a:hover {
-  color: #3b8e42;
+  color: #469a4d;
 }
 
 .navMenu .dot {
   width: 6px;
   height: 6px;
-  background: #3b8e42;
+  background: #469a4d;
   border-radius: 50%;
   opacity: 0;
   -webkit-transform: translateX(30px);
