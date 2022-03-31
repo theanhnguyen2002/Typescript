@@ -1,33 +1,32 @@
-import React from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
-import { signup } from '../api/auth';
-
+import { signin, signup } from '../api/auth';
+import { authenticated } from '../utils/localStorage';
 
 type TypeInputs = {
-    name: string,
     email: string,
     password: string
 }
 
-const Signup = () => {
-    const { register, handleSubmit, formState: { errors }} = useForm<TypeInputs>();
+const Signin = () => {
+    const { register, handleSubmit, formState: { errors } } = useForm<TypeInputs>();
     const navigate = useNavigate();
-    const onSubmit: SubmitHandler<TypeInputs> = data => {
-        signup(data);
-        navigate("/signin");
+
+    const onSubmit: SubmitHandler<TypeInputs> = async data => {
+        const { data: user } = await signin(data);
+        console.log(user);
+        // localstorage
+        authenticated(user, () => {
+            navigate('/');
+        })
     }
-  return (
-      <div className="">
-          <form onSubmit={handleSubmit(onSubmit)}>
-              <input type="text" placeholder='Tên' {...register('name')} />
-              <input type="email" placeholder='Email' {...register('email')} />
-              <input type="password" placeholder='Mật khẩu' {...register('password')} />
-              <button>Đăng ký</button>
-          </form>
-      </div>
-  )
+    return (
+        <form onSubmit={handleSubmit(onSubmit)}>
+            <input type="email" placeholder='Email' {...register('email')} />
+            <input type="password" placeholder='Mật khẩu' {...register('password')} />
+            <button>Đăng nhập</button>
+        </form>
+    )
 }
 
-
-export default Signup
+export default Signin
