@@ -1,10 +1,10 @@
 
 import instance from "./instance";
 import { ProductTye } from "../types/product";
-import { isAuthenticate } from "../utils/localStorage";
+// import { isAuthenticate } from "../utils/localStorage";
 
 
-const { token, user } = isAuthenticate();
+// const { token, user } = isAuthenticate();
 
 
 export const list = () => {
@@ -20,12 +20,15 @@ export const read = (id: string | undefined) => {
     return instance.get(url);
 }
 export const add = (product: ProductTye) => {
-    const url = `/products/${user._id}`;
-    return instance.post(url, product, {
-        headers: {
-            "Authorization": `Bearer ${token}`
-        }
-    });
+    const url = `/products`;
+    return instance.post(url, product);
+
+    // const url = `/products/${user._id}`;
+    // return instance.post(url, product), {
+    //     headers: {
+    //         "Authorization": "Bearer ${token}"
+    //     }
+    // };
 }
 export const update = (product: ProductTye) => {
     const url = `/products/${product.id}`;
