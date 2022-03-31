@@ -5,7 +5,9 @@ type Props = {}
 
 const AboutPage = (props: Props) => {
     return (
-        <h1>About</h1>
+        <div className="" id="about-page">
+            <h1>About</h1>
+        </div>
     )
 }
 

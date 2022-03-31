@@ -8,7 +8,7 @@ type Props = {}
 const ProductPage = (props: Props) => {
     return (
         <div>
-            <div className="wrapper rounded bg-white">
+            <div className="wrapper rounded bg-white" id="product-page">
                 <div className="d-flex align-items-center justify-content-end px-sm-3 pt-3 px-1">
                     <div className="text-muted">Items per page (<b>53 items</b> )</div> <select name="num" id="num" className="px-2 py-1 ml-sm-2 ml-1">
                     <option value={10}>10</option>
