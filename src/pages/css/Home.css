@@ -64,10 +64,10 @@ div.h4 {
     position: relative
 }
 
-.card:hover {
+/* .card:hover {
     border: 1px solid #000;
     box-shadow: 3px 3px 30px rgb(166, 255, 144)
-}
+} */
 
 .red {
     background-color: #e03e3e;

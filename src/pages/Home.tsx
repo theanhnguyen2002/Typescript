@@ -351,24 +351,7 @@ const Home = (props: Props) => {
                     </form>
                     </div>
                 </section>
-                {/* Footer*/}
-                <footer className="footer py-4">
-                    <div className="container">
-                    <div className="row align-items-center">
-                        <div className="col-lg-4 text-lg-start">Copyright © Your Website 2022</div>
-                        <div className="col-lg-4 my-3 my-lg-0">
-                        <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i className="fab fa-twitter" /></a>
-                        <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i className="fab fa-facebook-f" /></a>
-                        <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i className="fab fa-linkedin-in" /></a>
-                        </div>
-                        <div className="col-lg-4 text-lg-end">
-                        <a className="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
-                        <a className="link-dark text-decoration-none" href="#!">Terms of Use</a>
-                        </div>
-                    </div>
-                    </div>
-                </footer>
-                {/* Portfolio Modals*/}
+                
                 {/* Portfolio item 1 modal popup*/}
                 <div className="portfolio-modal modal fade" id="portfolioModal1" tabIndex={-1} role="dialog" aria-hidden="true">
                     <div className="modal-dialog">
@@ -579,21 +562,13 @@ const Home = (props: Props) => {
                     </div>
                     </div>
                 </div>
-                {/* Bootstrap core JS*/}
-                {/* Core theme JS*/}
-                {/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * **/}
-                {/* * *                               SB Forms JS                               * **/}
-                {/* * * Activate your form at https://startbootstrap.com/solution/contact-forms * **/}
-                {/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * **/}
                 </div>
 
 
 
 
             </div>
-            <div>
-                <ProductPage />
-            </div>
+            
 
             
         </div>
