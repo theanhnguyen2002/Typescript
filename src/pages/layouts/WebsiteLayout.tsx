@@ -31,7 +31,7 @@ const WebsiteLayout = (props: Props) => {
                         <a><NavLink to="/">Home</NavLink></a>
                         <a><NavLink to="/product">Product</NavLink></a>
                         <a><NavLink to="/about">About</NavLink></a>
-                        <a><NavLink to="/admin">Contact</NavLink></a>
+                        <a><NavLink to="/contact">Contact</NavLink></a>
 
                         <div className="dot" />
                     </nav>
