@@ -2,6 +2,8 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import { useNavigate, NavLink } from 'react-router-dom';
 import { signup } from '../api/auth';
 
+import './../pages/assets/vendor/fonts/boxicons.css';
+import './../pages/assets/vendor/css/pages/page-auth.css';
 
 
 

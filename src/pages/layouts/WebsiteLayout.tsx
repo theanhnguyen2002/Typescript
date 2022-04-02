@@ -21,15 +21,17 @@ const WebsiteLayout = (props: Props) => {
         <div>
             <div className="fixed-top" id="bg-header">
                 <header className="fixed-top" id="header">
-                    <div className="logo">
-                        <img src="https://res.cloudinary.com/dsirnbuyv/image/upload/v1648705533/1024px-Starbucks_Corporation_Logo_2011.svg_yoawtg.png" alt="" width="160px" height="50px" />
-                    </div>
+                    <NavLink to="/">
+                        <div className="logo">
+                            <img src="https://res.cloudinary.com/dsirnbuyv/image/upload/v1648705533/1024px-Starbucks_Corporation_Logo_2011.svg_yoawtg.png" alt="" width="160px" height="50px" />
+                        </div>
+                    </NavLink>
                     <nav className="navMenu">
 
                         <a><NavLink to="/">Home</NavLink></a>
                         <a><NavLink to="/product">Product</NavLink></a>
                         <a><NavLink to="/about">About</NavLink></a>
-                        {/* <a><NavLink to="/admin">Admin</NavLink></a> */}
+                        <a><NavLink to="/admin">Contact</NavLink></a>
 
                         <div className="dot" />
                     </nav>
@@ -148,6 +150,8 @@ const WebsiteLayout = (props: Props) => {
                         <li><a href="#" className="py-2 d-block"><NavLink to="/">Home</NavLink></a></li>
                         <li><a href="#" className="py-2 d-block"><NavLink to="/product">Product</NavLink></a></li>
                         <li><a href="#" className="py-2 d-block"><NavLink to="/about">About</NavLink></a></li>
+                        <li><a href="#" className="py-2 d-block"><NavLink to="/about">Contact</NavLink></a></li>
+
                         <li><a href="#" className="py-2 d-block"><NavLink to="/signup">Signup</NavLink></a></li>
                         <li><a href="#" className="py-2 d-block"><NavLink to="/signin">Signin</NavLink></a></li>
 

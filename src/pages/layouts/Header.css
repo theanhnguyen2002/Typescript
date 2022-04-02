@@ -65,32 +65,32 @@ body {
 }
 
 .navMenu a:nth-child(1):hover ~ .dot {
-  -webkit-transform: translateX(70px);
-  transform: translateX(70px);
+  -webkit-transform: translateX(72px);
+  transform: translateX(72px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 1;
 }
 
 .navMenu a:nth-child(2):hover ~ .dot {
-  -webkit-transform: translateX(177px);
-  transform: translateX(177px);
+  -webkit-transform: translateX(187px);
+  transform: translateX(187px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 1;
 }
 
 .navMenu a:nth-child(3):hover ~ .dot {
-  -webkit-transform: translateX(288px);
-  transform: translateX(288px);
+  -webkit-transform: translateX(310px);
+  transform: translateX(310px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 1;
 }
 
 .navMenu a:nth-child(4):hover ~ .dot {
-  -webkit-transform: translateX(390px);
-  transform: translateX(390px);
+  -webkit-transform: translateX(430px);
+  transform: translateX(430px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 1;

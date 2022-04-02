@@ -14,7 +14,7 @@ type Props = {}
 const Dashboard = (props: Props) => {
     return (
         <div>
-            <div className="layout-page">
+            <div className="layout-pages"> {/* layout-page */}
                 {/* Navbar */}
                 
 

@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import { ProductTye } from '../types/product'
 import { Table, Tag, Space, Button } from 'antd';
-import './css/ProductManager.css'
 
 type ProductManagerProps = {
     products: ProductTye[];
@@ -35,41 +34,59 @@ const ProductManager = (props: ProductManagerProps) => {
         // <Table columns={columns} dataSource={dataSource} />
         
         <div>
-            <div>ProductList</div>
-            <div className="container mt-5">
-                <div className="d-flex justify-content-center row">
-                    <div className="col-md-10">
-                    <div className="rounded">
-                        <div className="table-responsive table-borderless">
-                        <table className="table">
-                            <thead>
+
+            <div className="card">
+                <h5 className="card-header">Product List</h5>
+                <div className="table-responsive text-nowrap">
+                    <table className="table">
+                        <thead>
                             <tr>
-                                <th className="text-center">#</th>
-                                <th>Name</th>
-                                <th>Price</th>
-                                <th />
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Actions</th>
                             </tr>
-                            </thead>
-                            <tbody className="table-body">
-                                {props.products.map((item, index) => {
-                                    return <tr className="cell-1" key={index}>
-                                        <td className="text-center">{index + 1}</td>
-                                        <td>{item.name}</td>
-                                        <td>{item.price}</td>
-                                        <td>
-                                            {/* <span className="badge badge-success">Fullfilled</span> */}
-                                            <a id="edit" href=""><Link to={`/admin/products/${item.id}/edit`}>Edit</Link></a>
-                                            <button id="button_remove">Remove</button>
-                                        </td>                                    
-                                    </tr>
-                                })}
-                            </tbody>
-                        </table>
-                        </div>
-                    </div>
-                    </div>
+                        </thead>
+                        <tbody className="table-border-bottom-0">
+                            {props.products.map((item, index) => {
+                                return <tr key={index}>
+                                    <td>
+                                        <strong>{index + 1}</strong>
+                                    </td>
+                                    <td>{item.name}</td>
+                                    <td>
+                                        <span className="badge bg-label-danger me-1">{item.price} $</span>
+                                    </td>
+                                    <td>
+                                        <div className="dropdown">
+                                            <button type="button" className="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                                <i className="bx bx-dots-vertical-rounded" />
+                                            </button>
+                                            <div className="dropdown-menu">
+                                                <Link to={`/admin/products/${item.id}/edit`}>
+                                                    <a className="dropdown-item" id="edit" >
+                                                        <i className="bx bx-edit-alt me-1" /> Edit
+                                                    </a>
+                                                </Link>
+                                                <a className="dropdown-item" id="button_remove" >
+                                                    <i className="bx bx-trash me-1" /> Remove
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            })}
+                            
+                        </tbody>
+                        
+                    </table>
                 </div>
             </div>
+
+
+
+
+
         </div>
 
 

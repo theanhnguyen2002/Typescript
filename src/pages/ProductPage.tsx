@@ -46,6 +46,9 @@ const ProductPage = (props: Props) => {
                 </div>
                 
             </div>
+
+            
+
         </div>
     )
 }

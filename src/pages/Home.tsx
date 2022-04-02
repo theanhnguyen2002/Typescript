@@ -23,40 +23,37 @@ const Home = (props: Props) => {
                     <div className="container">
                     <div className="masthead-subheading">Welcome To Our Shop!</div>
                     <div className="masthead-heading text-uppercase">Starbucks</div>
-                            <a className="btn-xl text-uppercase" id="btn-banner" href="#services">TLearn about us</a>
+                            <a className="btn-xl text-uppercase" id="btn-banner" href="#services">See more</a>
                     </div>
                 </header>
                 {/* Services*/}
                 <section className="page-section" id="services">
                     <div className="container">
                     <div className="text-center">
-                        <h2 className="section-heading text-uppercase">Services</h2>
-                        <h3 className="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                        <h2 className="section-heading text-uppercase">Getting started is easy</h2>
+                        <h3 className="section-subheading text-muted">Earn Stars and get rewarded in a few easy steps.</h3>
                     </div>
                     <div className="row text-center">
                         <div className="col-md-4">
-                        <span className="fa-stack fa-4x">
-                            <i className="fas fa-circle fa-stack-2x text-primary" />
-                            <i className="fas fa-shopping-cart fa-stack-1x fa-inverse" />
-                        </span>
-                        <h4 className="my-3">E-Commerce</h4>
-                        <p className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                        <button className="bt-so">
+                            <h1>1</h1>
+                        </button>
+                            <h4 className="my-3">Create an account</h4>
+                            <p className="text-muted">To get started, join now. You can also join in the app to get access to the full range of Starbucks® Rewards benefits.</p>
                         </div>
                         <div className="col-md-4">
-                        <span className="fa-stack fa-4x">
-                            <i className="fas fa-circle fa-stack-2x text-primary" />
-                            <i className="fas fa-laptop fa-stack-1x fa-inverse" />
-                        </span>
-                        <h4 className="my-3">Responsive Design</h4>
-                        <p className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                        <button className="bt-so">
+                            <h1>2</h1>
+                        </button>
+                            <h4 className="my-3">Order and pay how you like</h4>
+                            <p className="text-muted">Use cash, credit/debit card or save some time and pay right through the app. You’ll collect Stars all ways. Learn how</p>
                         </div>
                         <div className="col-md-4">
-                        <span className="fa-stack fa-4x">
-                            <i className="fas fa-circle fa-stack-2x text-primary" />
-                            <i className="fas fa-lock fa-stack-1x fa-inverse" />
-                        </span>
-                        <h4 className="my-3">Web Security</h4>
-                        <p className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                        <button className="bt-so">
+                            <h1>3</h1>
+                        </button>
+                            <h4 className="my-3">Earn Stars, get Rewards</h4>
+                            <p className="text-muted">As you earn Stars, you can redeem them for Rewards—like free food, drinks, and more. Start redeeming with as little as 25 Stars!</p>
                         </div>
                     </div>
                     </div>
@@ -65,8 +62,8 @@ const Home = (props: Props) => {
                 <section className="page-section bg-light" id="portfolio">
                     <div className="container">
                     <div className="text-center">
-                        <h2 className="section-heading text-uppercase">Portfolio</h2>
-                        <h3 className="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                        <h2 className="section-heading text-uppercase">Category</h2>
+                        <h3 className="section-subheading text-muted">Drinks and Food</h3>
                     </div>
                     <div className="row">
                         <div className="col-lg-4 col-sm-6 mb-4">
@@ -76,11 +73,11 @@ const Home = (props: Props) => {
                             <div className="portfolio-hover">
                                 <div className="portfolio-hover-content"><i className="fas fa-plus fa-3x" /></div>
                             </div>
-                            <img className="img-fluid" src="assets/img/portfolio/1.jpg" alt="..." />
+                                <img className="img-fluid" src="https://res.cloudinary.com/dsirnbuyv/image/upload/v1648922965/sbx20190617-33269-caffeamericano-ongreen-corelib-srgb_sfkl5o.jpg" alt="..." />
                             </a>
                             <div className="portfolio-caption">
-                            <div className="portfolio-caption-heading">Threads</div>
-                            <div className="portfolio-caption-subheading text-muted">Illustration</div>
+                            <div className="portfolio-caption-heading">Coffees</div>
+                                <div className="portfolio-caption-subheading text-muted">Drinks</div>
                             </div>
                         </div>
                         </div>
@@ -91,11 +88,11 @@ const Home = (props: Props) => {
                             <div className="portfolio-hover">
                                 <div className="portfolio-hover-content"><i className="fas fa-plus fa-3x" /></div>
                             </div>
-                            <img className="img-fluid" src="assets/img/portfolio/2.jpg" alt="..." />
+                                <img className="img-fluid" src="https://res.cloudinary.com/dsirnbuyv/image/upload/v1648922965/sbx20190624-38221-royalenglishbreakfastblacktea-ongreen-corelib-g7op_ds3trp.jpg" alt="..." />
                             </a>
                             <div className="portfolio-caption">
-                            <div className="portfolio-caption-heading">Explore</div>
-                            <div className="portfolio-caption-subheading text-muted">Graphic Design</div>
+                            <div className="portfolio-caption-heading">Teas</div>
+                            <div className="portfolio-caption-subheading text-muted">Drinks</div>
                             </div>
                         </div>
                         </div>
@@ -106,59 +103,15 @@ const Home = (props: Props) => {
                             <div className="portfolio-hover">
                                 <div className="portfolio-hover-content"><i className="fas fa-plus fa-3x" /></div>
                             </div>
-                            <img className="img-fluid" src="assets/img/portfolio/3.jpg" alt="..." />
+                                <img className="img-fluid" src="https://res.cloudinary.com/dsirnbuyv/image/upload/v1648923331/starbucks-breakfast-sandwich_ctzp1o.jpg" alt="..." />
                             </a>
                             <div className="portfolio-caption">
-                            <div className="portfolio-caption-heading">Finish</div>
-                            <div className="portfolio-caption-subheading text-muted">Identity</div>
+                            <div className="portfolio-caption-heading">Sandwiches</div>
+                            <div className="portfolio-caption-subheading text-muted">Food</div>
                             </div>
                         </div>
                         </div>
-                        <div className="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                        {/* Portfolio item 4*/}
-                        <div className="portfolio-item">
-                            <a className="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
-                            <div className="portfolio-hover">
-                                <div className="portfolio-hover-content"><i className="fas fa-plus fa-3x" /></div>
-                            </div>
-                            <img className="img-fluid" src="assets/img/portfolio/4.jpg" alt="..." />
-                            </a>
-                            <div className="portfolio-caption">
-                            <div className="portfolio-caption-heading">Lines</div>
-                            <div className="portfolio-caption-subheading text-muted">Branding</div>
-                            </div>
-                        </div>
-                        </div>
-                        <div className="col-lg-4 col-sm-6 mb-4 mb-sm-0">
-                        {/* Portfolio item 5*/}
-                        <div className="portfolio-item">
-                            <a className="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
-                            <div className="portfolio-hover">
-                                <div className="portfolio-hover-content"><i className="fas fa-plus fa-3x" /></div>
-                            </div>
-                            <img className="img-fluid" src="assets/img/portfolio/5.jpg" alt="..." />
-                            </a>
-                            <div className="portfolio-caption">
-                            <div className="portfolio-caption-heading">Southwest</div>
-                            <div className="portfolio-caption-subheading text-muted">Website Design</div>
-                            </div>
-                        </div>
-                        </div>
-                        <div className="col-lg-4 col-sm-6">
-                        {/* Portfolio item 6*/}
-                        <div className="portfolio-item">
-                            <a className="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
-                            <div className="portfolio-hover">
-                                <div className="portfolio-hover-content"><i className="fas fa-plus fa-3x" /></div>
-                            </div>
-                            <img className="img-fluid" src="assets/img/portfolio/6.jpg" alt="..." />
-                            </a>
-                            <div className="portfolio-caption">
-                            <div className="portfolio-caption-heading">Window</div>
-                            <div className="portfolio-caption-subheading text-muted">Photography</div>
-                            </div>
-                        </div>
-                        </div>
+                        
                     </div>
                     </div>
                 </section>
@@ -224,75 +177,15 @@ const Home = (props: Props) => {
                     </ul>
                     </div>
                 </section>
-                {/* Team*/}
-                <section className="page-section bg-light" id="team">
-                    <div className="container">
-                    <div className="text-center">
-                        <h2 className="section-heading text-uppercase">Our Amazing Team</h2>
-                        <h3 className="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                    </div>
-                    <div className="row">
-                        <div className="col-lg-4">
-                        <div className="team-member">
-                            <img className="mx-auto rounded-circle" src="assets/img/team/1.jpg" alt="..." />
-                            <h4>Parveen Anand</h4>
-                            <p className="text-muted">Lead Designer</p>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Twitter Profile"><i className="fab fa-twitter" /></a>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Facebook Profile"><i className="fab fa-facebook-f" /></a>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand LinkedIn Profile"><i className="fab fa-linkedin-in" /></a>
-                        </div>
-                        </div>
-                        <div className="col-lg-4">
-                        <div className="team-member">
-                            <img className="mx-auto rounded-circle" src="assets/img/team/2.jpg" alt="..." />
-                            <h4>Diana Petersen</h4>
-                            <p className="text-muted">Lead Marketer</p>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Twitter Profile"><i className="fab fa-twitter" /></a>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Facebook Profile"><i className="fab fa-facebook-f" /></a>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen LinkedIn Profile"><i className="fab fa-linkedin-in" /></a>
-                        </div>
-                        </div>
-                        <div className="col-lg-4">
-                        <div className="team-member">
-                            <img className="mx-auto rounded-circle" src="assets/img/team/3.jpg" alt="..." />
-                            <h4>Larry Parker</h4>
-                            <p className="text-muted">Lead Developer</p>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Twitter Profile"><i className="fab fa-twitter" /></a>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Facebook Profile"><i className="fab fa-facebook-f" /></a>
-                            <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker LinkedIn Profile"><i className="fab fa-linkedin-in" /></a>
-                        </div>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-lg-8 mx-auto text-center"><p className="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p></div>
-                    </div>
-                    </div>
-                </section>
+                
                 {/* Clients*/}
-                <div className="py-5">
-                    <div className="container">
-                    <div className="row align-items-center">
-                        <div className="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img className="img-fluid img-brand d-block mx-auto" src="assets/img/logos/microsoft.svg" alt="..." aria-label="Microsoft Logo" /></a>
-                        </div>
-                        <div className="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img className="img-fluid img-brand d-block mx-auto" src="assets/img/logos/google.svg" alt="..." aria-label="Google Logo" /></a>
-                        </div>
-                        <div className="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img className="img-fluid img-brand d-block mx-auto" src="assets/img/logos/facebook.svg" alt="..." aria-label="Facebook Logo" /></a>
-                        </div>
-                        <div className="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img className="img-fluid img-brand d-block mx-auto" src="assets/img/logos/ibm.svg" alt="..." aria-label="IBM Logo" /></a>
-                        </div>
-                    </div>
-                    </div>
-                </div>
+                
                 {/* Contact*/}
                 <section className="page-section" id="contact">
                     <div className="container">
                     <div className="text-center">
                         <h2 className="section-heading text-uppercase">Contact Us</h2>
-                        <h3 className="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                        {/* <h3 className="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> */}
                     </div>
                     {/* * * * * * * * * * * * * * * **/}
                     {/* * * SB Forms Contact Form * **/}
