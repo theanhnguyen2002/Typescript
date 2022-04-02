@@ -148,8 +148,8 @@ const WebsiteLayout = (props: Props) => {
                         <li><a href="#" className="py-2 d-block"><NavLink to="/">Home</NavLink></a></li>
                         <li><a href="#" className="py-2 d-block"><NavLink to="/product">Product</NavLink></a></li>
                         <li><a href="#" className="py-2 d-block"><NavLink to="/about">About</NavLink></a></li>
-                        <li><a href="#" className="py-2 d-block"><NavLink to="">Signup</NavLink></a></li>
-                        <li><a href="#" className="py-2 d-block"><NavLink to="">Signin</NavLink></a></li>
+                        <li><a href="#" className="py-2 d-block"><NavLink to="/signup">Signup</NavLink></a></li>
+                        <li><a href="#" className="py-2 d-block"><NavLink to="/signin">Signin</NavLink></a></li>
 
 
 
