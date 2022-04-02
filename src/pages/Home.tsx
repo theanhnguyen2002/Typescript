@@ -119,8 +119,8 @@ const Home = (props: Props) => {
                 <section className="page-section" id="about">
                     <div className="container">
                     <div className="text-center">
-                        <h2 className="section-heading text-uppercase">About</h2>
-                        <h3 className="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 className="section-heading text-uppercase">About</h2>
+                    <h3 className="section-subheading text-muted">History of establishment and development of Starbucks</h3>
                     </div>
                     <ul className="timeline">
                         <li>
@@ -238,7 +238,7 @@ const Home = (props: Props) => {
                 </section>
                 
                 {/* Category item 1 modal popup*/}
-                    <div className="portfolio-modal modal fade" id="portfolioModal1" tabIndex={-1} role="dialog" aria-hidden="true">
+                <div className="portfolio-modal modal fade" id="portfolioModal1" tabIndex={-1} role="dialog" aria-hidden="true">
                     <div className="modal-dialog">
                     <div className="modal-content">
                                 <div className="close-modal" data-bs-dismiss="modal">
