@@ -5,6 +5,14 @@ import ProductPage from './../pages/ProductPage';
 import './js/scripts.js';
 import './css/styles.css';
 
+// import 'https://fonts.googleapis.com/css?family=Roboto|Open+Sans';
+// import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
+// import 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css';
+// import 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js';
+// import 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js';
+// import './../pages/js/Home.js';
+
+
 
 
 
@@ -26,6 +34,10 @@ const Home = (props: Props) => {
                             <a className="btn-xl text-uppercase" id="btn-banner" href="#services">See more</a>
                     </div>
                 </header>
+
+                
+
+
                 {/* 123*/}
                 <section className="page-section" id="services">
                     <div className="container">

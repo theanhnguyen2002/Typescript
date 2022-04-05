@@ -60,7 +60,7 @@ function App() {
           <Route path="/" element={<WebsiteLayout />}>
             <Route index element={<Home />}  />
             <Route path="product">
-              <Route index element={<ProductPage /> } />
+              <Route index element={<PrivateRouter><ProductPage products={products}/></PrivateRouter> } />
               <Route path=":id" element={<ProductDetail />} />
             </Route>
             <Route path="about" element={<AboutPage />} />

@@ -9,33 +9,33 @@ type ProductManagerProps = {
     products: ProductTye[];
     onRemove: (id: string | undefined) => void
 }
-const columns = [
-    {
-        title: 'Name',
-        dataIndex: 'name',
-        key: 'name',
-    },
-    {
-        title: 'Price',
-        dataIndex: 'price',
-        key: 'price',
-    },
-    {
-        title: 'Img',
-        dataIndex: 'img',
-        key: 'img',
-    }
-]
+// const columns = [
+//     {
+//         title: 'Name',
+//         dataIndex: 'name',
+//         key: 'name',
+//     },
+//     {
+//         title: 'Price',
+//         dataIndex: 'price',
+//         key: 'price',
+//     },
+//     {
+//         title: 'Img',
+//         dataIndex: 'img',
+//         key: 'img',
+//     }
+// ]
 
 const ProductManager = (props: ProductManagerProps) => {
-    const dataSource = props.products.map((item, index) => {
-        return {
-            key: index + 1,
-            name: item.name,
-            img: item.img,
-            price: item.price
-        }
-    })
+    // const dataSource = props.products.map((item, index) => {
+    //     return {
+    //         key: index + 1,
+    //         name: item.name,
+    //         img: item.img,
+    //         price: item.price
+    //     }
+    // })
     return (
 
 

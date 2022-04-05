@@ -50,8 +50,9 @@ const ProductAdd = (props: ProductAddProps) => {
         <form onSubmit={handleSubmit(onSubmit)}>
             {props.name}
             <input type="text" placeholder='Ten san pham' {...register('name')} />
-            <input type="number" placeholder='Gia san pham' {...register('price')} />
             <input type="file" placeholder='Anh san pham' {...imgField} onChange={(e) => { imgField.onChange(e); imgProduct(e) }} />
+            <input type="number" placeholder='Gia san pham' {...register('price')} />
+            
             <button>Add</button>
         </form>
     )
