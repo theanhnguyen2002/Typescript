@@ -34,12 +34,12 @@ function App() {
     };
     getProducts();
   }, [])
-  const removeItem = (id: number) => {
+  const removeItem = (id: string | undefined) => {
     // call api
     remove(id);
 
     // reRender
-    setProducts(products.filter(item => item.id !== id));
+    setProducts(products.filter(item => item._id !== id));
   }
   const onHandleAdd = async (product: ProductTye) => {
     const { data } = await add(product);
@@ -48,7 +48,7 @@ function App() {
 
   const onHandleUpdate = async (product: ProductTye) => {
     const { data } = await update(product);
-    setProducts(products.map(item => item.id == data.id ? data: item));
+    setProducts(products.map(item => item._id == data._id ? data: item));
   }
 
   return (

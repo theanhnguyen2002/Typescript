@@ -1,5 +1,6 @@
 export type ProductTye = {
-    id?: number,
+    _id?: string,
     name: string,
+    img: string ,
     price: number
 }

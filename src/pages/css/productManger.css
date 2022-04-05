@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.card-header{
+    display: grid;
+    grid-template-columns: 1fr 80px;
+}
+.card-header button{
+    width: 80px;
+    height: 30px;
+    border: 1px solid rgb(0, 0, 0);
+    background: rgb(83, 123, 255);
+    color: rgb(255, 255, 255);
+    border-radius: 7px;
+}

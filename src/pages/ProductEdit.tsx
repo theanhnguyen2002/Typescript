@@ -11,6 +11,7 @@ type ProductEditProps = {
 
 type FromInputs = {
     name: string,
+    img: string,
     price: number
 }
 
@@ -39,6 +40,7 @@ const ProductEdit = (props: ProductEditProps) => {
     return (
         <form action="" onSubmit={handleSubmit(onSubmit)}>
             <input type="text"  {...register('name', { required: true })} />
+            <input type="file"  {...register('img')} />
             <input type="number"  {...register("price")} />
             <button>Update</button>
         </form>
