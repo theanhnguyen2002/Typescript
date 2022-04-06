@@ -46,19 +46,20 @@ const Signup = () => {
                             {/* /Logo */}
                             <h4 className="mb-2">Adventure starts here 🚀</h4>
                             <p className="mb-4">Make your app management easy and fun!</p>
-                            <form id="formAuthentication" className="mb-3" action="index.html" method="POST">
+                            <form id="formAuthentication" className="mb-3" action="index.html" method="POST"
+                                onSubmit={handleSubmit(onSubmit)} >
                                 <div className="mb-3">
                                     <label htmlFor="username" className="form-label">Username</label>
-                                    <input type="text" className="form-control" id="username" name="username" placeholder="Enter your username" />
+                                    <input type="text" className="form-control" id="username" placeholder='user name' {...register('name')} />
                                 </div>
                                 <div className="mb-3">
                                     <label htmlFor="email" className="form-label">Email</label>
-                                    <input type="text" className="form-control" id="email" name="email" placeholder="Enter your email" />
+                                    <input type="text" className="form-control" id="email" placeholder='email' {...register('email')} />
                                 </div>
                                 <div className="mb-3 form-password-toggle">
                                     <label className="form-label" htmlFor="password">Password</label>
                                     <div className="input-group input-group-merge">
-                                        <input type="password" id="password" className="form-control" name="password" placeholder="············" aria-describedby="password" />
+                                        <input type="password" id="password" className="form-control" placeholder='password' {...register('password')} aria-describedby="password" />
                                         <span className="input-group-text cursor-pointer"><i className="bx bx-hide" /></span>
                                     </div>
                                 </div>

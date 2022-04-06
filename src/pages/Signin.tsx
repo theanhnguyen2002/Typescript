@@ -45,10 +45,11 @@ const Signin = () => {
                     {/* /Logo */}
                     <h4 className="mb-2">Welcome to Sneat! 👋</h4>
                     <p className="mb-4">Please sign-in to your account and start the adventure</p>
-                    <form id="formAuthentication" className="mb-3" action="index.html" method="POST">
+                    <form id="formAuthentication" className="mb-3" action="index.html" method="POST"
+                        onSubmit={handleSubmit(onSubmit)} >
                         <div className="mb-3">
-                        <label htmlFor="email" className="form-label">Email or Username</label>
-                        <input type="text" className="form-control" id="email" name="email-username" placeholder="Enter your email or username"  />
+                        <label htmlFor="email" className="form-label">Email</label>
+                            <input type="text" className="form-control" id="email" placeholder='email' {...register('email')}  />
                         </div>
                         <div className="mb-3 form-password-toggle">
                         <div className="d-flex justify-content-between">
@@ -58,7 +59,7 @@ const Signin = () => {
                             </a>
                         </div>
                         <div className="input-group input-group-merge">
-                            <input type="password" id="password" className="form-control" name="password" placeholder="············" aria-describedby="password" />
+                            <input type="password" id="password" className="form-control" placeholder='password' {...register('password')} aria-describedby="password" />
                             <span className="input-group-text cursor-pointer"><i className="bx bx-hide" /></span>
                         </div>
                         </div>

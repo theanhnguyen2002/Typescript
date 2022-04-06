@@ -23,9 +23,9 @@ import Signup from './pages/Signup';
 import Signin from './pages/Signin';
 
 
-
 function App() {
   const [products, setProducts] = useState<ProductTye[]>([]);
+  
 
   useEffect(() => {
     const getProducts = async () => {
@@ -42,7 +42,9 @@ function App() {
     setProducts(products.filter(item => item._id !== id));
   }
   const onHandleAdd = async (product: ProductTye) => {
+    
     const { data } = await add(product);
+    
     setProducts([...products, data]);
   }
 
