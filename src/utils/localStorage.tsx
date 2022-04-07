@@ -18,9 +18,7 @@ export const check = () => {
                     <li>
                         <a className="dropdown-item" href="#">
                             <i className="bx bx-user me-2" />
-                            <span className="align-middle">
-                                Admin
-                            </span>
+                            <span className="align-middle">Admin</span>
                         </a>
                     </li>
                 </NavLink>
