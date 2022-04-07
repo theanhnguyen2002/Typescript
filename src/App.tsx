@@ -21,6 +21,7 @@ import ProductEdit from './pages/ProductEdit';
 import PrivateRouter from './components/PrivateRouter';
 import Signup from './pages/Signup';
 import Signin from './pages/Signin';
+import Cart from './pages/Cart';
 
 
 function App() {
@@ -66,6 +67,8 @@ function App() {
               <Route path=":id" element={<ProductDetail />} />
             </Route>
             <Route path="about" element={<AboutPage />} />
+            <Route path="cart" element={<Cart />} />
+
           </Route>
 
           <Route path="admin" element={<PrivateRouter><AdminLayout /></PrivateRouter>}>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Outlet, NavLink } from 'react-router-dom'
 import "./Header.css";
+import { useState } from 'react';
 
 import "./../css/ionicons.min.css";
 import "./../css/style.css";
@@ -11,12 +12,58 @@ import "./../js/main.js";
 
 
 import './../../pages/assets/vendor/css/core.css';
+import { check } from '../../utils/localStorage';
+
+
 
 
 
 type Props = {}
 
 const WebsiteLayout = (props: Props) => {
+
+    const [user, setuser] = useState(1);
+
+    const isAuthenticate = () => {
+        if (localStorage.getItem('user')) {
+            return <div>
+                <li>
+                    <NavLink to="/" onClick={() => { localStorage.removeItem('user') ; setuser(0)}}>
+                        <a className="dropdown-item">
+                            <i className="bx bx-power-off me-2" />
+                            <span className="align-middle">Log Out</span>
+                        </a>
+                    </NavLink>
+                </li>
+            </div>
+        } else {
+            return <div>
+                <li><a href="#" className="py-2 d-block">
+                    <NavLink to="/signup">
+                        <a className="dropdown-item">
+                            {/* <i className="bx bx-power-off me-2" /> */}
+                            <span className="align-middle">Signup</span>
+                        </a>
+                    </NavLink>
+                </a></li>
+                <li><a href="#" className="py-2 d-block">
+                    <NavLink to="/signin">
+                        <a className="dropdown-item">
+                            {/* <i className="bx bx-power-off me-2" /> */}
+                            <span className="align-middle">Signin</span>
+                        </a>
+                    </NavLink>
+                </a></li>
+            </div>
+        }
+    }
+
+
+
+
+
+
+
     return (
         <div>
             <div className="fixed-top" id="bg-header">
@@ -39,13 +86,15 @@ const WebsiteLayout = (props: Props) => {
                         <div className="search-box">
                             <input type="text" className="input-search" placeholder="Search..." />
                         </div>
-                        <div className="cart">
-                            <a href="#">
-                                <img src="https://res.cloudinary.com/dsirnbuyv/image/upload/v1648705533/cart_v2r6xb.png" alt="" width="25px" height="25px" />
-                            </a>
-                        </div>
+                        <NavLink to="/cart">
+                            <div className="cart">
+                                <a href="">
+                                    <img src="https://res.cloudinary.com/dsirnbuyv/image/upload/v1648705533/cart_v2r6xb.png" alt="" width="25px" height="25px" />
+                                </a>
+                            </div>
+                        </NavLink>
                     </div>
-                    
+
                     <div className="">
                         <ul className="navbar-nav flex-row align-items-center ms-auto">
 
@@ -75,14 +124,9 @@ const WebsiteLayout = (props: Props) => {
                                     <li>
                                         <div className="dropdown-divider" />
                                     </li>
-                                    <NavLink to="/admin">
-                                    <li>
-                                        <a className="dropdown-item" href="#">
-                                            <i className="bx bx-user me-2" />
-                                            <span className="align-middle">Admin</span>
-                                        </a>
-                                    </li>
-                                    </NavLink>
+
+                                    {check()}    {/* admin */}
+                                    
                                     <li>
                                         <a className="dropdown-item" href="#">
                                             <i className="bx bx-cog me-2" />
@@ -100,13 +144,11 @@ const WebsiteLayout = (props: Props) => {
                                     </li>
                                     <li>
                                         <div className="dropdown-divider" />
+                                        
                                     </li>
-                                    <li>
-                                        <a className="dropdown-item" href="auth-login-basic.html">
-                                            <i className="bx bx-power-off me-2" />
-                                            <span className="align-middle">Log Out</span>
-                                        </a>
-                                    </li>
+                                    {isAuthenticate()} {/* signin, signup */}
+
+
                                 </ul>
                             </li>
                             {/*/ User */}
@@ -122,60 +164,60 @@ const WebsiteLayout = (props: Props) => {
             <footer className="footer-01 max-w-screen-md">
                 <div className="container">
                     <div className="row">
-                    <div className="col-md-6 col-lg-3 mb-4 mb-md-0 ">
-                        <h2 className="footer-heading">About</h2>
+                        <div className="col-md-6 col-lg-3 mb-4 mb-md-0 ">
+                            <h2 className="footer-heading">About</h2>
                             <p>Our aspiration is to be people positive investing in humanity and the well-being of everyone we connect with, from our partners to coffee farmers to the customers in our stores and beyond.</p>
-                        <ul className="ftco-footer-social p-0">
-                        <li className="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><span className="ion-logo-twitter" /></a></li>
-                        <li className="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><span className="ion-logo-facebook" /></a></li>
-                        <li className="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><span className="ion-logo-instagram" /></a></li>
-                        </ul>
-                    </div>
-                    <div className="col-md-6 col-lg-3 mb-4 mb-md-0">
-                        <h2 className="footer-heading">News</h2>
-                        
-                        <div className="block-21 mb-4 d-flex">
-                                <a className="img mr-4 rounded" style={{ backgroundImage: 'url(https://res.cloudinary.com/dsirnbuyv/image/upload/v1648497831/tai-sao-starbucks-lai-that-sung-o-thi-truong-viet-nam_lt7wlr.jpg)'}} />
-                        <div className="text">
+                            <ul className="ftco-footer-social p-0">
+                                <li className="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><span className="ion-logo-twitter" /></a></li>
+                                <li className="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><span className="ion-logo-facebook" /></a></li>
+                                <li className="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><span className="ion-logo-instagram" /></a></li>
+                            </ul>
+                        </div>
+                        <div className="col-md-6 col-lg-3 mb-4 mb-md-0">
+                            <h2 className="footer-heading">News</h2>
+
+                            <div className="block-21 mb-4 d-flex">
+                                <a className="img mr-4 rounded" style={{ backgroundImage: 'url(https://res.cloudinary.com/dsirnbuyv/image/upload/v1648497831/tai-sao-starbucks-lai-that-sung-o-thi-truong-viet-nam_lt7wlr.jpg)' }} />
+                                <div className="text">
                                     <h3 className="heading"><a href="#">Starbucks Innovates, Tests and Learns from Store Partners to Achieve Waste Goals</a></h3>
-                            <div className="meta">
-                                <div><a href="#"><span className="icon-calendar" /> 29/3/2022</a></div>
+                                    <div className="meta">
+                                        <div><a href="#"><span className="icon-calendar" /> 29/3/2022</a></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        <div className="col-md-6 col-lg-3 pl-lg-5 mb-4 mb-md-0">
+                            <h2 className="footer-heading">Menu Page</h2>
+                            <ul className="list-unstyled">
+                                <li><a href="#" className="py-2 d-block"><NavLink to="/">Home</NavLink></a></li>
+                                <li><a href="#" className="py-2 d-block"><NavLink to="/product">Product</NavLink></a></li>
+                                <li><a href="#" className="py-2 d-block"><NavLink to="/about">About</NavLink></a></li>
+                                <li><a href="#" className="py-2 d-block"><NavLink to="/about">Contact</NavLink></a></li>
+
+                                <li><a href="#" className="py-2 d-block"><NavLink to="/signup">Signup</NavLink></a></li>
+                                <li><a href="#" className="py-2 d-block"><NavLink to="/signin">Signin</NavLink></a></li>
+
+
+
+                            </ul>
                         </div>
-                    </div>
-                    <div className="col-md-6 col-lg-3 pl-lg-5 mb-4 mb-md-0">
-                        <h2 className="footer-heading">Menu Page</h2>
-                        <ul className="list-unstyled">
-                        <li><a href="#" className="py-2 d-block"><NavLink to="/">Home</NavLink></a></li>
-                        <li><a href="#" className="py-2 d-block"><NavLink to="/product">Product</NavLink></a></li>
-                        <li><a href="#" className="py-2 d-block"><NavLink to="/about">About</NavLink></a></li>
-                        <li><a href="#" className="py-2 d-block"><NavLink to="/about">Contact</NavLink></a></li>
-
-                        <li><a href="#" className="py-2 d-block"><NavLink to="/signup">Signup</NavLink></a></li>
-                        <li><a href="#" className="py-2 d-block"><NavLink to="/signin">Signin</NavLink></a></li>
-
-
-
-                        </ul>
-                    </div>
-                    <div className="col-md-6 col-lg-3 mb-4 mb-md-0">
+                        <div className="col-md-6 col-lg-3 mb-4 mb-md-0">
                             <h2 className="footer-heading">Contact</h2>
-                        <div className="block-23 mb-3">
-                        <ul>
-                            <li><span className="icon ion-ios-pin" /><span className="">FPT Polytechnic Hà Nội</span></li>
-                            <li><a href="#"><span className="icon ion-ios-call" /><span className="">0923.239.468</span></a></li>
-                            <li><a href="#"><span className="icon ion-ios-send" /><span className="">anhntph14690@fpt.edu.vn</span></a></li>
-                        </ul>
+                            <div className="block-23 mb-3">
+                                <ul>
+                                    <li><span className="icon ion-ios-pin" /><span className="">FPT Polytechnic Hà Nội</span></li>
+                                    <li><a href="#"><span className="icon ion-ios-call" /><span className="">0923.239.468</span></a></li>
+                                    <li><a href="#"><span className="icon ion-ios-send" /><span className="">anhntph14690@fpt.edu.vn</span></a></li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
                     </div>
                     <div className="row mt-5">
-                    <div className="col-md-12 text-center">
-                        <p className="copyright">{/* Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. */}
+                        <div className="col-md-12 text-center">
+                            <p className="copyright">{/* Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. */}
                                 Copyright © anhntph14690 | Assignment React-TypeSecript and Assignment NodeJS <i className="ion-ios-heart" aria-hidden="true" />
-                        {/* Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. */}</p>
-                    </div>
+                                {/* Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. */}</p>
+                        </div>
                     </div>
                 </div>
             </footer>
