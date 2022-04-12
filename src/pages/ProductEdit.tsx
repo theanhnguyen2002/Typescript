@@ -88,12 +88,12 @@ const ProductEdit = (props: ProductEditProps) => {
 
 
         <div className="container-xxl flex-grow-1 container-p-y">
-            <h4 className="fw-bold py-3 mb-4"><span className="text-muted fw-light">Product /</span> Add</h4>
+            <h4 className="fw-bold py-3 mb-4"><span className="text-muted fw-light">Product /</span> Edit</h4>
             <div className="row">
                 <div className="col-xl">
                     <div className="card mb-4">
                         <div className="card-header d-flex justify-content-between align-items-center">
-                            <h5 className="mb-0">Add</h5>
+                            <h5 className="mb-0">Edit</h5>
                         </div>
                         <div className="card-body">
                             <form onSubmit={handleSubmit(onSubmit)}>
