@@ -43,7 +43,7 @@ const Cart = (props: Props) => {
                             <h5 className="fw-bold mb-0">Total:</h5>
                             <h5 className="fw-bold mb-0">2261$</h5>
                             </div>
-                        </div>
+                        </div> 
                         <div className="col-lg-6 px-5 py-4">
                             <h3 className="mb-5 pt-2 text-center fw-bold text-uppercase">Payment</h3>
                             <form className="mb-5">
