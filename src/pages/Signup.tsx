@@ -46,7 +46,7 @@ const Signup = () => {
                             {/* /Logo */}
                             <h4 className="mb-2">Adventure starts here 🚀</h4>
                             <p className="mb-4">Make your app management easy and fun!</p>
-                            <form id="formAuthentication" className="mb-3" action="index.html" method="POST"
+                            <form id="formAuthentication" className="mb-3" method="POST"
                                 onSubmit={handleSubmit(onSubmit)} >
                                 <div className="mb-3">
                                     <label htmlFor="username" className="form-label">Username</label>

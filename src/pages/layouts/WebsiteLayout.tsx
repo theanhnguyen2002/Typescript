@@ -3,12 +3,12 @@ import { Outlet, NavLink } from 'react-router-dom'
 import "./Header.css";
 import { useState } from 'react';
 
-import "./../css/ionicons.min.css";
-import "./../css/style.css";
-import "./../js/jquery.min.js";
+// import "./../css/ionicons.min.css";
+// import "./../css/style.css";
+// import "./../js/jquery.min.js";
 // import "./../js/popper.js";
-import "./../js/bootstrap.min.js";
-import "./../js/main.js";
+
+// import "./../js/main.js";
 
 
 import './../../pages/assets/vendor/css/core.css';
@@ -125,7 +125,8 @@ const WebsiteLayout = (props: Props) => {
                                         <div className="dropdown-divider" />
                                     </li>
 
-                                    {check()}    {/* admin */}
+                                    {/* {check()}   */}
+                                      {/* admin */}
                                     
                                     <li>
                                         <a className="dropdown-item" href="#">
