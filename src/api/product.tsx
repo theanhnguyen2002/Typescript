@@ -22,13 +22,6 @@ export const read = (id: string | undefined) => {
 export const add = (product: ProductTye) => {
     const url = `/products`;
     return instance.post(url, product);
-
-    // const url = `/products/${user._id}`;
-    // return instance.post(url, product), {
-    //     headers: {
-    //         "Authorization": "Bearer ${token}"
-    //     }
-    // };
 }
 export const update = (product: ProductTye) => {
     const url = `/products/${product._id}`;

@@ -125,7 +125,7 @@ const WebsiteLayout = (props: Props) => {
                                         <div className="dropdown-divider" />
                                     </li>
 
-                                    {/* {check()}   */}
+                                    {check()}  
                                       {/* admin */}
                                     
                                     <li>
