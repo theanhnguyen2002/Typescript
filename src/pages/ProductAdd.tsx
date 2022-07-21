@@ -47,7 +47,6 @@ const ProductAdd = (props: ProductAddProps) => {
     }
     const imgField = register('img', { required: true });
     return (
-
         <div className="container-xxl flex-grow-1 container-p-y">
             <h4 className="fw-bold py-3 mb-4"><span className="text-muted fw-light">Product /</span> Add</h4>
             <div className="row">
@@ -61,19 +60,34 @@ const ProductAdd = (props: ProductAddProps) => {
                                 {props.name}
                                 <div className="mb-3">
                                     <label className="form-label" htmlFor="basic-default-fullname">Name Product</label>
-                                    <input type="text" className="form-control" id="basic-default-fullname" placeholder="name" {...register('name')}/>
+                                    <input type="text" className="form-control" id="basic-default-fullname" placeholder="name" {...register('name', { required: true, minLength: 5 })} />
                                 </div>
+                                {Object.keys(errors).length !== 0 && (
+                                    <ul className='text-red-500'>
+                                        {errors.name?.type == 'required' && <li>Nhập</li>}
+                                    </ul>
+                                )}
                                 <div className="mb-3">
                                     <label className="form-label" htmlFor="basic-default-fullname">Photo Product</label>
-                                    <input type="file" className="form-control" id="basic-default-fullname" {...imgField} onChange={(e) => { imgField.onChange(e); imgProduct(e) }}/>
+                                    <input type="file" className="form-control" id="basic-default-fullname" {...register('img', { required: true })}  {...imgField} onChange={(e) => { imgField.onChange(e); imgProduct(e) }} />
                                 </div>
+                                {Object.keys(errors).length !== 0 && (
+                                    <ul className='text-red-500'>
+                                        {errors.img?.type == 'required' && <li>Nhập</li>}
+                                    </ul>
+                                )}
                                 <div className="mb-3">
                                     <label className="form-label" htmlFor="basic-default-email">Price Product</label>
                                     <div className="input-group input-group-merge">
-                                        <input type="text" id="basic-default-email" className="form-control" placeholder="price" {...register('price')}/>
+                                        <input type="text" id="basic-default-email" className="form-control" placeholder="price" {...register('price', { required: true })} />
                                         <span className="input-group-text" id="basic-default-email2">$</span>
                                     </div>
                                 </div>
+                                {Object.keys(errors).length !== 0 && (
+                                    <ul className='text-red-500'>
+                                        {errors.price?.type == 'required' && <li className='text-red-500'>Nhập</li>}
+                                    </ul>
+                                )}
 
                                 {/* <div className="mb-3">
                                     <label className="form-label" htmlFor="basic-default-message">desc</label>
